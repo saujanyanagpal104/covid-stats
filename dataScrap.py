@@ -75,18 +75,6 @@ dataObject['totalActiveCases']['critical'] = criticalActiveCases
 dataObject['totalClosedCases']['deaths'] = deathClosedCases
 dataObject['totalClosedCases']['total'] = totalClosedCases
 dataObject['totalClosedCases']['recovered'] = recoveredClosedCases
-dataFile = open('./src/data/content.json', 'w')
+dataFile = open('/home/saujanya/Documents/covid-19/src/data/content.json', 'w')
 dataFile.write(json.dumps(dataObject))
 dataFile.close()
-
-
-
-print('totalCases' + ' ' + totalCases)
-print('totalRecovered' + ' ' + totalRecovered)
-print('totalDeaths' + ' ' + totalDeaths)
-print('totalActiveCases' + ' ' + totalActiveCases)
-print('mildActiveCases' + ' ' + mildActiveCases)
-print('criticalActiveCases' + ' ' + criticalActiveCases)
-print('totalClosedCases' + ' ' + totalClosedCases)
-print('recoveredClosedCases' + ' ' + recoveredClosedCases)
-print('deathClosedCases' + ' ' + deathClosedCases)

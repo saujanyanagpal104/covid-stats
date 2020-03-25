@@ -4,6 +4,7 @@ import Header from './Header';
 import VirusInfo from './VirusInfo';
 import '../styles/index.css';
 import GlobalCases from './GlobalCases';
+import DataTable from './DataTable';
 
 const App = () => {
     return (
@@ -11,6 +12,7 @@ const App = () => {
             <Header />
             <Temp />
             <GlobalCases />
+            <DataTable />
         </div>
     )
 }
