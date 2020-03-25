@@ -5,7 +5,6 @@ const Temp = () => (
         <ul>
             <li>Show Symptomes</li>
             <li>Precautions</li>
-            <li>Precautions</li>
             <li>What PM Modi is saying</li>
             <li>World Data IMP: TOTAL Confirmed Cases, Deaths, Cured</li>
             <li>India Data IMP: TOTAL Confirmed Cases, Deaths, Cured</li>
