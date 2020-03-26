@@ -26,7 +26,7 @@ recoveredClosedCases = closedCasesData.find('div', {'class': 'number-table-main'
 deathClosedCases = closedCasesData.find('div', {'class': 'number-table-main'}).findNextSiblings('div')[1].findAll('span', {'class': 'number-table'})[1].text.strip()
 
 todayDataTable = todayTable.div.table.tbody
-yesterdayDataTable = todayTable.div.table.tbody
+yesterdayDataTable = yesterdayTable.div.table.tbody
 
 def getCountry(data):
     if data.findAll('td')[0]:
@@ -41,29 +41,25 @@ def getCountry(data):
 for row  in todayDataTable.findAll('tr'):
     dataObj = {}
     dataObj['country'] = getCountry(row)
-    dataObj['total_cases'] = row.findAll('td')[1].text.encode('utf-8').strip() if row.findAll('td')[1].text.encode('utf-8').strip() != None else ''
-    dataObj['new_cases'] = row.findAll('td')[2].text.encode('utf-8').strip() if row.findAll('td')[2].text.encode('utf-8').strip() != None else ''
-    dataObj['total_deaths'] = row.findAll('td')[3].text.encode('utf-8').strip() if row.findAll('td')[3].text.encode('utf-8').strip() != None else ''
-    dataObj['new_deaths'] = row.findAll('td')[4].text.encode('utf-8').strip() if row.findAll('td')[4].text.encode('utf-8').strip() != None else ''
-    dataObj['recovered_cases'] = row.findAll('td')[5].text.encode('utf-8').strip() if row.findAll('td')[5].text.encode('utf-8').strip() != None else ''
-    dataObj['active_cases'] = row.findAll('td')[6].text.encode('utf-8').strip() if row.findAll('td')[6].text.encode('utf-8').strip() != None else ''
-    dataObj['critical_cases'] = row.findAll('td')[7].text.encode('utf-8').strip() if row.findAll('td')[7].text.encode('utf-8').strip() != None else ''
-    dataObj['total_cases_per_million'] = row.findAll('td')[8].text.encode('utf-8').strip() if row.findAll('td')[8].text.encode('utf-8').strip() != None else ''
-    dataObj['total_deaths_per_million'] = row.findAll('td')[9].text.encode('utf-8').strip() if row.findAll('td')[9].text.encode('utf-8').strip() != None else ''
+    dataObj['total_cases'] = row.findAll('td')[1].text.encode('utf-8').strip() if row.findAll('td')[1].text.encode('utf-8').strip() != None else '0'
+    dataObj['new_cases'] = row.findAll('td')[2].text.encode('utf-8').strip() if row.findAll('td')[2].text.encode('utf-8').strip() != None else '0'
+    dataObj['total_deaths'] = row.findAll('td')[3].text.encode('utf-8').strip() if row.findAll('td')[3].text.encode('utf-8').strip() != None else '0'
+    dataObj['new_deaths'] = row.findAll('td')[4].text.encode('utf-8').strip() if row.findAll('td')[4].text.encode('utf-8').strip() != None else '0'
+    dataObj['recovered_cases'] = row.findAll('td')[5].text.encode('utf-8').strip() if row.findAll('td')[5].text.encode('utf-8').strip() != None else '0'
+    dataObj['active_cases'] = row.findAll('td')[6].text.encode('utf-8').strip() if row.findAll('td')[6].text.encode('utf-8').strip() != None else '0'
+    dataObj['critical_cases'] = row.findAll('td')[7].text.encode('utf-8').strip() if row.findAll('td')[7].text.encode('utf-8').strip() != None else '0'
     dataObject['todayData'].append(dataObj)
 
 for row  in yesterdayDataTable.findAll('tr'):
     dataObj = {}
     dataObj['country'] = getCountry(row)
-    dataObj['total_cases'] = row.findAll('td')[1].text.encode('utf-8').strip() if row.findAll('td')[1].text.encode('utf-8').strip() != None else ''
-    dataObj['new_cases'] = row.findAll('td')[2].text.encode('utf-8').strip() if row.findAll('td')[2].text.encode('utf-8').strip() != None else ''
-    dataObj['total_deaths'] = row.findAll('td')[3].text.encode('utf-8').strip() if row.findAll('td')[3].text.encode('utf-8').strip() != None else ''
-    dataObj['new_deaths'] = row.findAll('td')[4].text.encode('utf-8').strip() if row.findAll('td')[4].text.encode('utf-8').strip() != None else ''
-    dataObj['recovered_cases'] = row.findAll('td')[5].text.encode('utf-8').strip() if row.findAll('td')[5].text.encode('utf-8').strip() != None else ''
-    dataObj['active_cases'] = row.findAll('td')[6].text.encode('utf-8').strip() if row.findAll('td')[6].text.encode('utf-8').strip() != None else ''
-    dataObj['critical_cases'] = row.findAll('td')[7].text.encode('utf-8').strip() if row.findAll('td')[7].text.encode('utf-8').strip() != None else ''
-    dataObj['total_cases_per_million'] = row.findAll('td')[8].text.encode('utf-8').strip() if row.findAll('td')[8].text.encode('utf-8').strip() != None else ''
-    dataObj['total_deaths_per_million'] = row.findAll('td')[9].text.encode('utf-8').strip() if row.findAll('td')[9].text.encode('utf-8').strip() != None else ''
+    dataObj['total_cases'] = row.findAll('td')[1].text.encode('utf-8').strip() if row.findAll('td')[1].text.encode('utf-8').strip() != None else '0'
+    dataObj['new_cases'] = row.findAll('td')[2].text.encode('utf-8').strip() if row.findAll('td')[2].text.encode('utf-8').strip() != None else '0'
+    dataObj['total_deaths'] = row.findAll('td')[3].text.encode('utf-8').strip() if row.findAll('td')[3].text.encode('utf-8').strip() != None else '0'
+    dataObj['new_deaths'] = row.findAll('td')[4].text.encode('utf-8').strip() if row.findAll('td')[4].text.encode('utf-8').strip() != None else '0'
+    dataObj['recovered_cases'] = row.findAll('td')[5].text.encode('utf-8').strip() if row.findAll('td')[5].text.encode('utf-8').strip() != None else '0'
+    dataObj['active_cases'] = row.findAll('td')[6].text.encode('utf-8').strip() if row.findAll('td')[6].text.encode('utf-8').strip() != None else '0'
+    dataObj['critical_cases'] = row.findAll('td')[7].text.encode('utf-8').strip() if row.findAll('td')[7].text.encode('utf-8').strip() != None else '0'
     dataObject['yesterdayData'].append(dataObj)
 
 dataObject['totalCases'] = totalCases

@@ -4,7 +4,9 @@ import Header from './Header';
 import VirusInfo from './VirusInfo';
 import '../styles/index.css';
 import GlobalCases from './GlobalCases';
-import DataTable from './DataTable';
+import TodayTable from './TodayTable';
+import YesterdayTable from './YesterdayTable';
+import tableData from '../data/content.json';
 
 const App = () => {
     return (
@@ -12,7 +14,8 @@ const App = () => {
             <Header />
             <Temp />
             <GlobalCases />
-            <DataTable />
+            <TodayTable tableData={tableData} />
+            <YesterdayTable tableData={tableData} />
         </div>
     )
 }
