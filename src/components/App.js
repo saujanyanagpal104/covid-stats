@@ -1,21 +1,20 @@
 import React from 'react';
-import Temp from './Temp';
 import Header from './Header';
-import VirusInfo from './VirusInfo';
-import '../styles/index.css';
-import GlobalCases from './GlobalCases';
-import TodayTable from './TodayTable';
-import YesterdayTable from './YesterdayTable';
+import '../styles/index.scss';
 import tableData from '../data/content.json';
+import Tables from './Tables';
+import SymptomsAndPrevention from './SymptomsAndPrevention';
+import OverallData from './OverallData';
+import DataBlocks from './DataBlocks';
 
 const App = () => {
     return (
         <div className='main-wrapper'>
             <Header />
-            <Temp />
-            <GlobalCases />
-            <TodayTable tableData={tableData} />
-            <YesterdayTable tableData={tableData} />
+            <SymptomsAndPrevention />
+            <OverallData tableData={tableData} />
+            <DataBlocks tableData={tableData} />
+            <Tables tableData={tableData} />
         </div>
     )
 }

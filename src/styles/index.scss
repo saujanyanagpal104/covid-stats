@@ -1,0 +1,210 @@
+$color: #545454;
+$headingColor: #337ab7;
+$fontFamily: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+.main-wrapper {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.title-and-logo {
+    display: flex;
+    align-items: center;
+
+    img {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+h1 {
+    font-family: $fontFamily;
+    color: $headingColor;
+    margin: 0;
+}
+
+.data-table {
+    width: 100%;
+    border: 1px solid #ebebeb;
+    border-spacing: 0px;
+    font-family: $fontFamily;
+    color: $color;
+
+    td, th {
+        text-align: center;
+        border: 1px solid #ebebeb;
+        padding: 10px;
+    }
+
+    .red {
+        color: #ff0000b3;
+        font-weight: bold;
+    }
+
+    .green {
+        color: #8ACA2B;
+        font-weight: bold;
+    }
+
+    .bold {
+        font-weight: bold;
+        color: #337ab7;
+    }
+}
+
+.switch-and-search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .search-box input {
+        padding: 10px;
+        color: $color;
+    }
+
+    .table-switch {
+        display: flex;
+        color: $color;
+        margin: 20px 0;
+        font-family: $fontFamily;
+    
+        .active {
+            background-color: #337ab7;
+            color: white;
+            border-radius: 5px;
+        }
+    
+        .today-button, .yesterday-button {
+            padding: 10px;
+            cursor: pointer;
+        }
+    }
+}
+
+.symptoms-and-prevention {
+    display: flex;
+    background-color: #fff1b0;
+    justify-content: space-around;
+    margin: 40px 0px;
+
+    .symptoms {
+        flex: 1;
+        border-right: 1px solid #fff;
+        padding: 50px;
+    }
+
+    .spread-and-prevention {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+        padding: 50px;
+    }
+
+    .how-it-spreads, .prevention {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .how-it-spreads-heading, .prevention-heading {
+        color: $headingColor;
+        font-family: $fontFamily;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+}
+
+.overall-data {
+    text-align: center;
+
+    .total-cases, .total-deaths, .total-recovered {
+        margin: 40px 0px;
+    }
+
+    .total-cases-number, .total-deaths-number, .total-recovered-number {
+        font-size: 54px;
+        font-weight: bold;
+        font-family: $fontFamily;
+    }
+
+    .total-cases-number {
+        color: #aaaaaa;
+    }
+
+    .total-deaths-number {
+        color: #ff0000b3;
+    }
+
+    .total-recovered-number {
+        color: #8ACA2B;
+    }
+
+}
+
+.active-cases, .closed-cases {
+    border: 1px solid #ebebeb;
+    flex: 1;
+    margin: 0px 20px;
+    width: 100%;
+    text-align: center;
+
+    .active-cases-data, .closed-cases-data, .mild-condition, .recovered-condition, .critical-condition, .deaths {
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0px;
+    }
+
+    .active-cases-heading-container, .closed-cases-heading-container {
+        background-color: #ddd;
+        padding: 20px 0px;
+
+        .active-cases-heading, .closed-cases-heading {
+            font-size: 25px;
+            font-family: $fontFamily;
+            font-weight: bold;
+            color: $color;
+        }
+    } 
+
+    .active-cases-number, .closed-cases-number, .mild-condition-number, .critical-condition-number, .recovered-condition-number, .deaths-number {
+        font-size: 25px;
+        font-weight: bold;
+        font-family: $fontFamily;
+    }
+
+    .active-cases-text, .closed-cases-text, .mild-condition-text, .critical-condition-text, .recovered-condition-text, .deaths-text {
+        font-size: 15px;
+        font-family: $fontFamily;
+    }
+
+    .active-cases-condition, .closed-cases-condition {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px 0px;
+    } 
+
+    .active-cases-number, .closed-cases-number, .deaths-number {
+        color: $color;
+    }
+
+    .mild-condition-number {
+        color: $headingColor;
+    }
+
+    .critical-condition-number {
+        color: #ff0000b3;
+    } 
+
+    .recovered-condition-number {
+        color: #8ACA2B;
+    }
+
+}
+
+.data-blocks {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0px;
+}

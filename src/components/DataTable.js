@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 
-const TodayTable = (props) => (
+const DataTable = (props) => (
     <div className='table-container'>
-        <table>
+        <table className='data-table'>
             <thead>
                 <tr>
                     <th>
@@ -33,17 +33,17 @@ const TodayTable = (props) => (
                 </tr>
             </thead>
             <tbody>
-                {props.tableData.todayData.map((row, index) => {
+                {props.tableData.map((row, index) => {
                     return (
                         <tr key={index}>
-                            <td>{row.country}</td>
+                            <td className='bold'>{row.country}</td>
                             <td>{row.total_cases}</td>
-                            <td>{row.new_cases}</td>
+                            <td className='red'>{row.new_cases}</td>
                             <td>{row.total_deaths}</td>
-                            <td>{row.new_deaths}</td>
+                            <td className='red'>{row.new_deaths}</td>
                             <td>{row.active_cases}</td>
                             <td>{row.critical_cases}</td>
-                            <td>{row.recovered_cases}</td>
+                            <td className='green'>{row.recovered_cases}</td>
                         </tr>
                     )
                 })}
@@ -52,4 +52,4 @@ const TodayTable = (props) => (
     </div>
 )
 
-export default TodayTable;
+export default DataTable;
