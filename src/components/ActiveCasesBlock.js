@@ -3,6 +3,8 @@ import React from 'react';
 const ActiveCasesBlock = ({tableData}) => {
 
     const {totalActiveCases} = tableData;
+    const mildPercentage = (parseInt(totalActiveCases.mild)/parseInt(totalActiveCases.total)) * 100;
+    const criticalPercentage = (parseInt(totalActiveCases.critical)/parseInt(totalActiveCases.total)) * 100;
 
     return(
             <div className='active-cases'>
@@ -20,17 +22,23 @@ const ActiveCasesBlock = ({tableData}) => {
                     </div>
                     <div className='active-cases-condition'>
                         <div className='mild-condition'>
-                            <span className='mild-condition-number'>
-                                {totalActiveCases.mild}
-                            </span>
+                            <div className='mild-condition-number'>
+                                <span>{totalActiveCases.mild}</span>
+                                <span className='percentage'>
+                                    ({mildPercentage.toFixed(2)}%)
+                                </span>
+                            </div>
                             <span className='mild-condition-text'>
                                 in Mild Condition
                             </span>
                         </div>
                         <div className='critical-condition'>
-                            <span className='critical-condition-number'>
-                                {totalActiveCases.critical}
-                            </span>
+                            <div className='critical-condition-number'>
+                                <span>{totalActiveCases.critical}</span>
+                                <span className='percentage'>
+                                    ({criticalPercentage.toFixed(2)}%)
+                                </span>
+                            </div>
                             <span className='critical-condition-text'>
                                 Serious or Critical
                             </span>

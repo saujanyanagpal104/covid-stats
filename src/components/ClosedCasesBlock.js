@@ -3,6 +3,8 @@ import React from 'react';
 const ClosedCasesBlock = ({tableData}) => {
 
     const {totalClosedCases} = tableData;
+    const recoveredPercentage = (parseInt(totalClosedCases.recovered)/parseInt(totalClosedCases.total)) * 100;
+    const deathsPercentage = (parseInt(totalClosedCases.deaths)/parseInt(totalClosedCases.total)) * 100;
 
     return(
             <div className='closed-cases'>
@@ -20,17 +22,23 @@ const ClosedCasesBlock = ({tableData}) => {
                     </div>
                     <div className='closed-cases-condition'>
                         <div className='recovered-condition'>
-                            <span className='recovered-condition-number'>
-                                {totalClosedCases.recovered}
-                            </span>
+                            <div className='recovered-condition-number'>
+                                <span>{totalClosedCases.recovered}</span>
+                                <span className='percentage'>
+                                    ({recoveredPercentage.toFixed(2)}%)
+                                </span>
+                            </div>
                             <span className='recovered-condition-text'>
                                 Recovered / Discharged
                             </span>
                         </div>
                         <div className='deaths'>
-                            <span className='deaths-number'>
-                                {totalClosedCases.deaths}
-                            </span>
+                            <div className='deaths-number'>
+                                <span>{totalClosedCases.deaths}</span>
+                                <span className='percentage'>
+                                    ({deathsPercentage.toFixed(2)}%)
+                                </span>
+                            </div>
                             <span className='deaths-text'>
                                 Deaths
                             </span>
