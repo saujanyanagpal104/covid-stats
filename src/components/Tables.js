@@ -3,14 +3,24 @@ import DataTable from './DataTable';
 
 const Tables = ({tableData}) => {
     const [table, changeTable] = useState(true);
-    const [searchValue, setSearchValue] = useState();
+    const [searchValue, setSearchValue] = useState('');
+    const [filteredData, setFilteredData] = useState([]);
 
     const handleClick = () => {
+        setSearchValue('');
+        setFilteredData([]);
         changeTable(!table);
     }
 
+    const searchCountry = (input) => {
+        let data = table ? tableData.todayData : tableData.yesterdayData;
+        let filteredData = data.filter((val) => val.country.toLowerCase().search(input.toLowerCase()) !== -1);
+        (input) ? setFilteredData(filteredData) : setFilteredData([])
+    }
+
     const handleChange = (e) => {
-        setSearchValue(e.target.value)
+        searchCountry(e.target.value);
+        setSearchValue(e.target.value);
     }
 
     
@@ -27,7 +37,7 @@ const Tables = ({tableData}) => {
                     </div>
                 </div>
                 <div className='tables'>
-                    <DataTable tableData={table ? tableData.todayData : tableData.yesterdayData} /> 
+                    <DataTable tableData={filteredData.length > 0 ? filteredData : table ? tableData.todayData : tableData.yesterdayData} /> 
                 </div>
         </div>
     )
