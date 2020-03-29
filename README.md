@@ -3,4 +3,4 @@
 ## How to run
 
 1. npm install
-2. npm start (Run on port:3000)
+2. npm start
