@@ -1,7 +1,11 @@
 $color: #545454;
 $headingColor: #337ab7;
 $fontFamily: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+$breakpoint-phone: 768px;
 
+.body {
+    margin: 0px;
+}
 
 .main-wrapper {
     max-width: 1200px;
@@ -213,4 +217,44 @@ h1 {
     display: flex;
     justify-content: space-between;
     margin: 40px 0px;
+}
+
+@media(max-width: $breakpoint-phone) {
+    .main-wrapper {
+        max-width: none;
+        margin: 10px;
+    }
+
+    .symptoms-and-prevention {
+        display: block;
+
+        .symptoms {
+            border: none;
+            padding: 10px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .spread-and-prevention {
+            padding: 10px;
+        }
+    }
+
+    .data-blocks {
+        display: block;
+
+        .active-cases, .closed-cases {
+            margin: 20px 0px;
+        }
+    }
+
+    .tables {
+        overflow: auto;
+    }
+
+    .switch-and-search .search-box input {
+        padding: 5px;
+    }
 }
