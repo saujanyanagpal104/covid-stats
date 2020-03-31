@@ -15,11 +15,9 @@ $breakpoint-phone: 768px;
 .title-and-logo {
     display: flex;
     align-items: center;
-
-    img {
-        height: 50px;
-        width: 50px;
-    }
+    justify-content: center;
+    background-color: #ebebeb;
+    padding: 20px 0px;
 }
 
 h1 {
