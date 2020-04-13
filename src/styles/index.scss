@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');
+
 $color: #545454;
-$headingColor: #337ab7;
-$fontFamily: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+$fontFamily: 'Lato', cursive;
 $breakpoint-phone: 768px;
 
 .body {
@@ -16,13 +17,13 @@ $breakpoint-phone: 768px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #ebebeb;
+    background-color: #ddd;
     padding: 20px 0px;
 }
 
 h1 {
     font-family: $fontFamily;
-    color: $headingColor;
+    color: $color;
     margin: 0;
 }
 
@@ -110,7 +111,7 @@ h1 {
     }
 
     .how-it-spreads-heading, .prevention-heading {
-        color: $headingColor;
+        color: $color;
         font-family: $fontFamily;
         font-weight: bold;
         margin-bottom: 15px;
@@ -192,7 +193,7 @@ h1 {
     }
 
     .mild-condition-number {
-        color: $headingColor;
+        color: $color;
     }
 
     .critical-condition-number {

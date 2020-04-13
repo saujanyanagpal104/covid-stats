@@ -11,10 +11,10 @@ const App = () => {
     return (
         <div className='main-wrapper'>
             <Header />
-            <SymptomsAndPrevention />
             <OverallData tableData={tableData} />
             <DataBlocks tableData={tableData} />
             <Tables tableData={tableData} />
+            <SymptomsAndPrevention />
         </div>
     )
 }
