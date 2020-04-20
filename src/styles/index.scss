@@ -4,7 +4,7 @@ $color: #545454;
 $fontFamily: 'Lato', cursive;
 $breakpoint-phone: 768px;
 
-.body {
+body {
     margin: 0px;
 }
 
@@ -38,6 +38,40 @@ h1 {
         text-align: center;
         border: 1px solid #ebebeb;
         padding: 10px;
+    }
+
+    .arrow-svg-red {
+        width: 11px;
+        height: 10px;
+        fill: #ff0000b3;
+    }
+
+    .arrow-svg-green {
+        width: 11px;
+        height: 10px;
+        fill: #8ACA2B;
+    }
+
+    .cities-table-row {
+        text-align: right;
+    }
+
+    .states-col {
+        text-align: left;
+    }
+
+    .delta-red {
+        color: #ff0000b3;
+        font-weight: bold;
+        font-size: 11px;
+        padding: 0px 5px;
+    }
+
+    .delta-green {
+        color: #8ACA2B;
+        font-weight: bold;
+        font-size: 11px;
+        padding: 0px 5px;
     }
 
     .red {
@@ -172,7 +206,7 @@ h1 {
     } 
 
     .active-cases-number, .closed-cases-number, .mild-condition-number, .critical-condition-number, .recovered-condition-number, .deaths-number {
-        font-size: 25px;
+        font-size: 20px;
         font-weight: bold;
         font-family: $fontFamily;
     }
@@ -218,6 +252,40 @@ h1 {
     margin: 40px 0px;
 }
 
+.indian-cities-heading {
+
+    h1 {
+        margin: 20px 0px;
+    }
+}
+
+.testing-table-heading {
+
+    h1 {
+        margin: 20px 0px;
+    }
+}
+
+.testing-table {
+    width: 100%;
+
+    table {
+        width: 100%;
+    }
+}
+
+.message-strip {
+    background-color: lightblue;
+    text-align: center;
+    padding: 20px;
+
+    .message-strip-text {
+        font-family: $fontFamily;
+        color: #fff;
+        font-weight: 900;
+    }
+}
+
 @media(max-width: $breakpoint-phone) {
     .main-wrapper {
         max-width: none;
@@ -255,5 +323,33 @@ h1 {
 
     .switch-and-search .search-box input {
         padding: 5px;
+    }
+
+    .indian-cities-data {
+        overflow: auto;
+
+        .cities-table-row {
+            text-align: center;
+
+            .delta-red {
+                display: flex;
+                align-items: baseline;
+                justify-content: center;
+            } 
+
+            .delta-green {
+                display: flex;
+                align-items: baseline;
+                justify-content: center;
+            }
+        }
+
+        .states-col {
+            text-align: center;
+        }
+    }
+
+    .testing-table {
+        overflow: auto;
     }
 }
