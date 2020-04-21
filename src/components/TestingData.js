@@ -1,7 +1,6 @@
 import React from 'react';
 
 const TestingData = ({testingStats}) => {
-    console.log(testingStats)
     return (
         <div className='testing-table'>
             <div className='testing-table-heading'>
