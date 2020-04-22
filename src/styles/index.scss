@@ -286,6 +286,27 @@ h1 {
     }
 }
 
+.show-districts {
+    padding: 0px 10px;
+    font-size: 10px;
+    color: #ff0000b3;
+    font-family: $fontFamily;
+    cursor: pointer;
+}
+
+.indian-districts {
+    // width: 195%;
+}
+
+.total-row-class {
+    background-color: black;
+    color: #fff;
+}
+
+.white-class {
+    color: #fff;
+}
+
 @media(max-width: $breakpoint-phone) {
     .main-wrapper {
         max-width: none;
@@ -346,6 +367,10 @@ h1 {
 
         .states-col {
             text-align: center;
+
+            span {
+                display: block;
+            }
         }
     }
 

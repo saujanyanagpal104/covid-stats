@@ -4,7 +4,7 @@ const TestingData = ({testingStats}) => {
     return (
         <div className='testing-table'>
             <div className='testing-table-heading'>
-                <h1>Testing Stats</h1>
+                <h1>Testing Stats:</h1>
             </div>
             <table className='data-table'>
                 <tbody>
